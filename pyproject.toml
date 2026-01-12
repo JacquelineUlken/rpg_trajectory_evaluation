@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "wheel", "catkin_pkg", "catkin_tools"]
+requires = ["setuptools", "wheel", "catkin_pkg"]
 build-backend = "setuptools.build_meta"
 
 [project]
