@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel", "catkin_pkg", "catkin_tools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rpg-trajectory-evaluation"
+version = "0.1.0"
+description = "Common used trajectory evaluation methods for visual(-inertial) odometry."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Zichao Zhang" }, { name = "Jonathan Huber" }, { name = "Jeffrey Delmerico" }, { name = "Christian Forster" }]
+maintainers = [{ name = "Zichao Zhang", email = "zzhang@ifi.uzh.ch" }]
+requires-python = ">=3.8"
+dependencies = ["numpy", "matplotlib", "colorama", "ruamel.yaml", "catkin_pkg", "catkin_tools"]
+
+[project.optional-dependencies]
+dev = ["ruff"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+exclude = ["analyze_trajectories_config/*", "doc/*", "results/*", "scripts/*", "src/*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

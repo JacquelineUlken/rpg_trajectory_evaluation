@@ -1,0 +1,25 @@
+# Python bytecode
+*.py[cod]
+*$py.class
+*.so
+
+# Python cache
+__pycache__/
+
+# Virtual environment
+.venv/
+
+# Lock file
+uv.lock
+
+# Distribution
+*.egg-info/
+dist/
+build/
+
+# Editor
+.idea/
+.vscode/
+
+# Ruff
+.ruff_cache/
